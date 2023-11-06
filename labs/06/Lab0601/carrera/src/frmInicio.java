@@ -4,10 +4,8 @@
  * and open the template in the editor.
  */
 
-/**
- *
- * @author jorge
- */
+/* Autor: Andres Felipe Martinez Orozco */
+
 public class frmInicio extends javax.swing.JFrame {
 
     /**
