@@ -15,17 +15,21 @@ public class SimuladorBicicleta extends JFrame {
     private int calorias;
 
     public SimuladorBicicleta() {
+        //Titulo del programa, tamaño de la ventana, si se cierra, detiene el programa
         setTitle("Bicicleta");
         setSize(600, 300);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-
+        
+        //Botones de los Pedales
         pedalIzquierdo = new JButton("Izquierda");
         pedalDerecho = new JButton("Derecha");
-
-        indicador1 = new JLabel("Velocidad: 0 km/h");
+        
+        //Indicadores de Velocidad, Calorias y Tiempo
+        indicador1 = new JLabel("Velocidad: 0.0 km/h");
         indicador2 = new JLabel("Calorías quemadas: 0");
         temporizadorLabel = new JLabel("Tiempo: 0 segundos");
-
+        
+        // Se asigna las filas y Columnas
         setLayout(new GridLayout(4, 2));
         add(indicador1);
         add(indicador2);
@@ -44,7 +48,8 @@ public class SimuladorBicicleta extends JFrame {
             }
         });
         tiempo.start();
-
+        
+        //Clase del Pedal Izquierdo
         pedalIzquierdo.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -54,7 +59,8 @@ public class SimuladorBicicleta extends JFrame {
                 simularBicicleta();
             }
         });
-
+        
+        //Clase del Pedal Derecho
         pedalDerecho.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -65,9 +71,9 @@ public class SimuladorBicicleta extends JFrame {
             }
         });
     }
-
+    
     private void simularBicicleta() {
-        // Simular el cálculo de la velocidad (por ejemplo, velocidad aleatoria entre 10 y 30 km/h)
+        // Simular el cálculo de la velocidad (velocidad entre 10 y 30 km/h)
         velocidad = Math.random() * 20 + 10;
 
         // Simular el cálculo de las calorías quemadas (cada pedalada quema 5 calorías)
