@@ -3,6 +3,8 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+/*Autor: Andres Felipe Martinez Orozco*/
+
 public class SimuladorBicicleta extends JFrame {
 
     private JButton pedalIzquierdo, pedalDerecho;
@@ -13,7 +15,7 @@ public class SimuladorBicicleta extends JFrame {
     private int calorias;
 
     public SimuladorBicicleta() {
-        setTitle("Simulador de Bicicleta");
+        setTitle("Bicicleta");
         setSize(600, 300);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
